@@ -1,0 +1,21 @@
+{
+  "name": "@forbes/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc -b tsconfig.json",
+    "typecheck": "tsc -b tsconfig.json --pretty false",
+    "lint": "eslint src --ext .ts,.tsx",
+    "clean": "rimraf dist tsconfig.tsbuildinfo",
+    "start": "expo start"
+  },
+  "dependencies": {
+    "@forbes/auth": "workspace:*",
+    "@forbes/theme": "workspace:*",
+    "@forbes/types": "workspace:*",
+    "@forbes/ui": "workspace:*",
+    "expo": "latest",
+    "react": "latest",
+    "react-native": "latest"
+  }
+}

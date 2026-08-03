@@ -1,0 +1,14 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/auth" },
+    { "path": "./packages/config" },
+    { "path": "./packages/graphql" },
+    { "path": "./packages/logger" },
+    { "path": "./packages/theme" },
+    { "path": "./packages/types" },
+    { "path": "./packages/ui" },
+    { "path": "./apps/backend" },
+    { "path": "./apps/mobile" }
+  ]
+}

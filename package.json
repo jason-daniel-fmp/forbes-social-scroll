@@ -1,0 +1,25 @@
+{
+  "name": "forbes-social-scroll",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "lint": "turbo run lint",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "clean": "turbo run clean"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@eslint/js": "latest",
+    "eslint": "latest",
+    "prettier": "latest",
+    "rimraf": "latest",
+    "turbo": "latest",
+    "typescript": "^5.9.0",
+    "typescript-eslint": "latest"
+  }
+}
