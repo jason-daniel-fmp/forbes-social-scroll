@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "composite": true,
+    "paths": {
+      "@forbes/auth": ["./packages/auth/src/index.ts"],
+      "@forbes/config": ["./packages/config/src/index.ts"],
+      "@forbes/graphql": ["./packages/graphql/src/index.ts"],
+      "@forbes/logger": ["./packages/logger/src/index.ts"],
+      "@forbes/theme": ["./packages/theme/src/index.ts"],
+      "@forbes/types": ["./packages/types/src/index.ts"],
+      "@forbes/ui": ["./packages/ui/src/index.ts"],
+      "@forbes/*": ["./packages/*/src"]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+node_modules
+.pnpm-store
+.turbo
+*.tsbuildinfo
+dist
+.DS_Store
+.expo
+coverage
