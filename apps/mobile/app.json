@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "Forbes Social Scroll",
+    "slug": "forbes-social-scroll",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "scheme": "forbes-social-scroll",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.anonymous.forbes-social-scroll"
+    }
+  }
+}

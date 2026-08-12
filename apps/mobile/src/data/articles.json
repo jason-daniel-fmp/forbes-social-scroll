@@ -1,0 +1,262 @@
+[
+  {
+    "id": "article-01",
+    "title": "The Rise Of The Creator Economy",
+    "subtitle": "How content creators are building businesses and changing the economy.",
+    "editor": {
+      "name": "Jason Shah",
+      "role": "Digital Economy Editor, Forbes Business",
+      "avatarKey": "author-01"
+    },
+    "paragraphs": [
+      "The creator economy is projected to reach $480B.",
+      "Creators are building brands, not just audiences.",
+      "Diversification is key to long-term success.",
+      "Platforms are investing in creator tools."
+    ],
+    "interactions": {
+      "likes": 12400,
+      "shares": 2100,
+      "bookmarks": 8700
+    },
+    "kpis": [
+      { "value": "$480B", "label": "Creator Economy", "sublabel": "by 2027" },
+      { "value": "200M+", "label": "Full-Time Creators", "sublabel": "worldwide" },
+      { "value": "70%", "label": "Creators are", "sublabel": "independent" }
+    ]
+  },
+  {
+    "id": "article-02",
+    "title": "AI Is Reshaping Enterprise Software",
+    "subtitle": "From copilots to autonomous agents, AI is becoming the new interface for work.",
+    "editor": {
+      "name": "Sarah Chen",
+      "role": "Technology Editor, Forbes Enterprise",
+      "avatarKey": "author-02"
+    },
+    "paragraphs": [
+      "Enterprise AI spending is expected to exceed $150B this year.",
+      "Copilots are moving from chat to workflow automation.",
+      "Data quality remains the biggest blocker to AI ROI.",
+      "Security and governance are now board-level priorities."
+    ],
+    "interactions": {
+      "likes": 9800,
+      "shares": 3400,
+      "bookmarks": 6200
+    },
+    "kpis": [
+      { "value": "$150B", "label": "Enterprise AI", "sublabel": "spending 2026" },
+      { "value": "62%", "label": "Fortune 500", "sublabel": "using AI copilots" },
+      { "value": "3.2x", "label": "Productivity", "sublabel": "gains reported" }
+    ]
+  },
+  {
+    "id": "article-03",
+    "title": "The Future Of Remote Work",
+    "subtitle": "Hybrid models are winning, but culture and collaboration remain unsolved.",
+    "editor": {
+      "name": "Michael Torres",
+      "role": "Workplace Editor, Forbes Leadership",
+      "avatarKey": "author-03"
+    },
+    "paragraphs": [
+      "78% of knowledge workers prefer hybrid schedules.",
+      "Office attendance policies are becoming more flexible.",
+      "Async collaboration tools are replacing status meetings.",
+      "Leaders who trust teams see higher retention."
+    ],
+    "interactions": {
+      "likes": 7600,
+      "shares": 1800,
+      "bookmarks": 5400
+    },
+    "kpis": [
+      { "value": "78%", "label": "Prefer hybrid", "sublabel": "work models" },
+      { "value": "41%", "label": "Fewer meetings", "sublabel": "vs. 2019" },
+      { "value": "2.1x", "label": "Retention lift", "sublabel": "trusted teams" }
+    ]
+  },
+  {
+    "id": "article-04",
+    "title": "Climate Tech Investment Surge",
+    "subtitle": "Venture capital is flowing into clean energy, carbon capture, and grid modernization.",
+    "editor": {
+      "name": "Emily Watson",
+      "role": "Sustainability Editor, Forbes Green",
+      "avatarKey": "author-04"
+    },
+    "paragraphs": [
+      "Climate tech funding hit a record $89B in the last cycle.",
+      "Solar and storage costs continue to fall sharply.",
+      "Carbon accounting software is a fast-growing category.",
+      "Policy incentives are accelerating deployment timelines."
+    ],
+    "interactions": {
+      "likes": 11200,
+      "shares": 2900,
+      "bookmarks": 7100
+    },
+    "kpis": [
+      { "value": "$89B", "label": "Climate tech", "sublabel": "VC funding" },
+      { "value": "35%", "label": "Cost drop", "sublabel": "solar + storage" },
+      { "value": "120+", "label": "New startups", "sublabel": "carbon tech" }
+    ]
+  },
+  {
+    "id": "article-05",
+    "title": "Gen Z Redefines Luxury Shopping",
+    "subtitle": "Experience, authenticity, and resale are reshaping premium retail.",
+    "editor": {
+      "name": "Priya Kapoor",
+      "role": "Retail Editor, Forbes Consumer",
+      "avatarKey": "author-05"
+    },
+    "paragraphs": [
+      "Gen Z drives 40% of luxury growth in key markets.",
+      "Resale platforms are becoming discovery channels.",
+      "Brand storytelling matters more than logo size.",
+      "Digital-first drops outperform traditional campaigns."
+    ],
+    "interactions": {
+      "likes": 8900,
+      "shares": 4100,
+      "bookmarks": 9300
+    },
+    "kpis": [
+      { "value": "40%", "label": "Luxury growth", "sublabel": "Gen Z driven" },
+      { "value": "$50B", "label": "Resale market", "sublabel": "by 2028" },
+      { "value": "67%", "label": "Shop via", "sublabel": "social media" }
+    ]
+  },
+  {
+    "id": "article-06",
+    "title": "The New Space Economy",
+    "subtitle": "Commercial launches, satellite constellations, and lunar ambitions are accelerating.",
+    "editor": {
+      "name": "David Park",
+      "role": "Innovation Editor, Forbes Aerospace",
+      "avatarKey": "author-06"
+    },
+    "paragraphs": [
+      "Private launch costs have dropped below $2,000 per kg.",
+      "Satellite data is powering agriculture and logistics.",
+      "Lunar infrastructure projects are attracting major capital.",
+      "Regulation is struggling to keep pace with launch volume."
+    ],
+    "interactions": {
+      "likes": 6700,
+      "shares": 1500,
+      "bookmarks": 4800
+    },
+    "kpis": [
+      { "value": "$2K", "label": "Launch cost", "sublabel": "per kg" },
+      { "value": "12K+", "label": "Active", "sublabel": "satellites" },
+      { "value": "$1.8T", "label": "Space economy", "sublabel": "by 2035" }
+    ]
+  },
+  {
+    "id": "article-07",
+    "title": "Healthcare Goes Personalized",
+    "subtitle": "Genomics, wearables, and AI diagnostics are shifting care from reactive to proactive.",
+    "editor": {
+      "name": "Dr. Lisa Nguyen",
+      "role": "Health Editor, Forbes Science",
+      "avatarKey": "author-01"
+    },
+    "paragraphs": [
+      "Wearable adoption among adults reached 58% globally.",
+      "AI-assisted diagnostics cut imaging review time by half.",
+      "Pharmacogenomics is entering mainstream primary care.",
+      "Patient data privacy remains a critical trust factor."
+    ],
+    "interactions": {
+      "likes": 10300,
+      "shares": 2200,
+      "bookmarks": 8100
+    },
+    "kpis": [
+      { "value": "58%", "label": "Wearable", "sublabel": "adoption rate" },
+      { "value": "50%", "label": "Faster", "sublabel": "diagnostics" },
+      { "value": "$320B", "label": "Digital health", "sublabel": "market size" }
+    ]
+  },
+  {
+    "id": "article-08",
+    "title": "Crypto Regulation Finds Its Footing",
+    "subtitle": "Clearer rules are emerging as institutions increase digital asset exposure.",
+    "editor": {
+      "name": "James Okonkwo",
+      "role": "Finance Editor, Forbes Markets",
+      "avatarKey": "author-02"
+    },
+    "paragraphs": [
+      "Institutional crypto holdings grew 28% year over year.",
+      "Stablecoin frameworks are gaining bipartisan support.",
+      "Tokenization of real-world assets is expanding rapidly.",
+      "Consumer protection standards are becoming global."
+    ],
+    "interactions": {
+      "likes": 5400,
+      "shares": 3800,
+      "bookmarks": 3900
+    },
+    "kpis": [
+      { "value": "28%", "label": "Institutional", "sublabel": "holdings growth" },
+      { "value": "$16T", "label": "Tokenized assets", "sublabel": "potential" },
+      { "value": "140", "label": "Countries", "sublabel": "with frameworks" }
+    ]
+  },
+  {
+    "id": "article-09",
+    "title": "The Talent Shortage In Cybersecurity",
+    "subtitle": "Demand for security professionals outpaces supply as threats grow more sophisticated.",
+    "editor": {
+      "name": "Anna Kowalski",
+      "role": "Security Editor, Forbes Tech",
+      "avatarKey": "author-03"
+    },
+    "paragraphs": [
+      "3.5 million cybersecurity roles remain unfilled worldwide.",
+      "AI-powered attacks are increasing breach frequency.",
+      "Upskilling programs are expanding inside enterprises.",
+      "Zero-trust architecture is becoming the default model."
+    ],
+    "interactions": {
+      "likes": 8200,
+      "shares": 1700,
+      "bookmarks": 5600
+    },
+    "kpis": [
+      { "value": "3.5M", "label": "Open roles", "sublabel": "worldwide" },
+      { "value": "74%", "label": "Firms report", "sublabel": "skill gaps" },
+      { "value": "$10.5T", "label": "Cybercrime cost", "sublabel": "by 2025" }
+    ]
+  },
+  {
+    "id": "article-10",
+    "title": "Small Business Banking Goes Digital",
+    "subtitle": "Fintech platforms are unbundling traditional banking for entrepreneurs.",
+    "editor": {
+      "name": "Rachel Brooks",
+      "role": "Small Business Editor, Forbes Finance",
+      "avatarKey": "author-04"
+    },
+    "paragraphs": [
+      "Digital-first SMB accounts grew 45% in two years.",
+      "Embedded lending is shortening approval cycles.",
+      "Cash-flow forecasting tools reduce late payments.",
+      "Community banks are partnering with fintech to compete."
+    ],
+    "interactions": {
+      "likes": 6100,
+      "shares": 1200,
+      "bookmarks": 4200
+    },
+    "kpis": [
+      { "value": "45%", "label": "Digital SMB", "sublabel": "account growth" },
+      { "value": "72hr", "label": "Average loan", "sublabel": "approval time" },
+      { "value": "$1.2T", "label": "SMB lending", "sublabel": "market" }
+    ]
+  }
+]

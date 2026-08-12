@@ -3,21 +3,27 @@
   "version": "0.1.0",
   "private": false,
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
     }
   },
   "scripts": {
     "build": "tsc -b tsconfig.json",
     "typecheck": "tsc -b tsconfig.json --pretty false",
-    "lint": "eslint src --ext .ts",
+    "lint": "eslint src --ext .ts,.tsx",
     "clean": "rimraf dist tsconfig.tsbuildinfo"
   },
+  "peerDependencies": {
+    "@expo/vector-icons": ">=14.0.0",
+    "react": ">=18.0.0",
+    "react-native": ">=0.76.0"
+  },
   "dependencies": {
+    "@expo/vector-icons": "^14.0.4",
     "@forbes/theme": "workspace:*",
     "@forbes/types": "workspace:*"
   }

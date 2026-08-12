@@ -2,20 +2,31 @@
   "name": "@forbes/mobile",
   "version": "0.1.0",
   "private": true,
+  "main": "index.js",
   "scripts": {
     "build": "tsc -b tsconfig.json",
     "typecheck": "tsc -b tsconfig.json --pretty false",
     "lint": "eslint src --ext .ts,.tsx",
     "clean": "rimraf dist tsconfig.tsbuildinfo",
-    "start": "expo start"
+    "start": "expo start",
+    "start:clear": "expo start --clear",
+    "ios": "expo run:ios",
+    "android": "expo run:android",
+    "web": "expo start --web"
   },
   "dependencies": {
-    "@forbes/auth": "workspace:*",
+    "@babel/runtime": "^8.0.0",
     "@forbes/theme": "workspace:*",
     "@forbes/types": "workspace:*",
     "@forbes/ui": "workspace:*",
-    "expo": "latest",
-    "react": "latest",
-    "react-native": "latest"
+    "expo": "~52.0.0",
+    "expo-status-bar": "~2.0.0",
+    "react": "18.3.1",
+    "react-native": "0.76.9",
+    "react-native-safe-area-context": "4.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.0",
+    "babel-preset-expo": "~12.0.0"
   }
 }

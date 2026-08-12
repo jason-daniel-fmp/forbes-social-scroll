@@ -1,13 +1,14 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": "src",
+    "rootDir": ".",
     "outDir": "dist",
-    "types": ["react", "react-native"]
+    "jsx": "react-jsx",
+    "types": ["react", "react-native"],
+    "resolveJsonModule": true
   },
-  "include": ["src"],
+  "include": ["App.tsx", "src", "src/**/*.json"],
   "references": [
-    { "path": "../../packages/auth" },
     { "path": "../../packages/theme" },
     { "path": "../../packages/types" },
     { "path": "../../packages/ui" }
