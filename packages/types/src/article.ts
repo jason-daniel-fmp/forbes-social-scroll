@@ -11,10 +11,33 @@ export interface ArticleInteractions {
 }
 
 export interface ArticleKpi {
+  type: 'kpi';
+  id: string;
   value: string;
   label: string;
   sublabel?: string;
 }
+
+export interface ArticleProductCta {
+  type: 'product';
+  id: string;
+  title: string;
+  price: string;
+  ctaLabel: string;
+  url: string;
+  badge?: string;
+}
+
+export interface ArticleJourneyCta {
+  type: 'journey';
+  id: string;
+  title: string;
+  description: string;
+  ctaLabel: string;
+  url: string;
+}
+
+export type ArticleCard = ArticleKpi | ArticleProductCta | ArticleJourneyCta;
 
 export interface Article {
   id: string;
@@ -23,5 +46,5 @@ export interface Article {
   editor: ArticleEditor;
   paragraphs: string[];
   interactions: ArticleInteractions;
-  kpis: ArticleKpi[];
+  cards: ArticleCard[];
 }

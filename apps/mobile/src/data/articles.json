@@ -19,10 +19,31 @@
       "shares": 2100,
       "bookmarks": 8700
     },
-    "kpis": [
-      { "value": "$480B", "label": "Creator Economy", "sublabel": "by 2027" },
-      { "value": "200M+", "label": "Full-Time Creators", "sublabel": "worldwide" },
-      { "value": "70%", "label": "Creators are", "sublabel": "independent" }
+    "cards": [
+      {
+        "type": "kpi",
+        "id": "a01-kpi-1",
+        "value": "$480B",
+        "label": "Creator Economy",
+        "sublabel": "by 2027"
+      },
+      {
+        "type": "product",
+        "id": "a01-product-1",
+        "title": "Creator Toolkit Pro",
+        "price": "$49/mo",
+        "ctaLabel": "Shop now",
+        "url": "https://www.forbes.com/connect/",
+        "badge": "Sponsored"
+      },
+      {
+        "type": "journey",
+        "id": "a01-journey-1",
+        "title": "Monetize Your Audience",
+        "description": "Start a free growth plan",
+        "ctaLabel": "Start journey",
+        "url": "https://www.forbes.com/newsletter/"
+      }
     ]
   },
   {
@@ -45,10 +66,31 @@
       "shares": 3400,
       "bookmarks": 6200
     },
-    "kpis": [
-      { "value": "$150B", "label": "Enterprise AI", "sublabel": "spending 2026" },
-      { "value": "62%", "label": "Fortune 500", "sublabel": "using AI copilots" },
-      { "value": "3.2x", "label": "Productivity", "sublabel": "gains reported" }
+    "cards": [
+      {
+        "type": "kpi",
+        "id": "a02-kpi-1",
+        "value": "$150B",
+        "label": "Enterprise AI",
+        "sublabel": "spending 2026"
+      },
+      {
+        "type": "product",
+        "id": "a02-product-1",
+        "title": "AI Ops Suite",
+        "price": "$199",
+        "ctaLabel": "Buy now",
+        "url": "https://www.forbes.com/advisor/",
+        "badge": "Partner"
+      },
+      {
+        "type": "journey",
+        "id": "a02-journey-1",
+        "title": "AI Readiness Check",
+        "description": "Assess your stack in 5 mins",
+        "ctaLabel": "Take quiz",
+        "url": "https://www.forbes.com/sites/advisor/"
+      }
     ]
   },
   {
@@ -71,10 +113,30 @@
       "shares": 1800,
       "bookmarks": 5400
     },
-    "kpis": [
-      { "value": "78%", "label": "Prefer hybrid", "sublabel": "work models" },
-      { "value": "41%", "label": "Fewer meetings", "sublabel": "vs. 2019" },
-      { "value": "2.1x", "label": "Retention lift", "sublabel": "trusted teams" }
+    "cards": [
+      {
+        "type": "kpi",
+        "id": "a03-kpi-1",
+        "value": "78%",
+        "label": "Prefer hybrid",
+        "sublabel": "work models"
+      },
+      {
+        "type": "journey",
+        "id": "a03-journey-1",
+        "title": "Hybrid Playbook",
+        "description": "Policy templates for teams",
+        "ctaLabel": "Open guide",
+        "url": "https://www.forbes.com/leadership/"
+      },
+      {
+        "type": "product",
+        "id": "a03-product-1",
+        "title": "Async Desk Pass",
+        "price": "$29",
+        "ctaLabel": "Get offer",
+        "url": "https://www.forbes.com/connect/"
+      }
     ]
   },
   {
@@ -97,10 +159,31 @@
       "shares": 2900,
       "bookmarks": 7100
     },
-    "kpis": [
-      { "value": "$89B", "label": "Climate tech", "sublabel": "VC funding" },
-      { "value": "35%", "label": "Cost drop", "sublabel": "solar + storage" },
-      { "value": "120+", "label": "New startups", "sublabel": "carbon tech" }
+    "cards": [
+      {
+        "type": "kpi",
+        "id": "a04-kpi-1",
+        "value": "$89B",
+        "label": "Climate tech",
+        "sublabel": "VC funding"
+      },
+      {
+        "type": "product",
+        "id": "a04-product-1",
+        "title": "Carbon Tracker",
+        "price": "$79/yr",
+        "ctaLabel": "Subscribe",
+        "url": "https://www.forbes.com/sites/energy/",
+        "badge": "Sponsored"
+      },
+      {
+        "type": "journey",
+        "id": "a04-journey-1",
+        "title": "Net-Zero Path",
+        "description": "Map your emissions plan",
+        "ctaLabel": "Begin",
+        "url": "https://www.forbes.com/newsletter/"
+      }
     ]
   },
   {
@@ -123,10 +206,31 @@
       "shares": 4100,
       "bookmarks": 9300
     },
-    "kpis": [
-      { "value": "40%", "label": "Luxury growth", "sublabel": "Gen Z driven" },
-      { "value": "$50B", "label": "Resale market", "sublabel": "by 2028" },
-      { "value": "67%", "label": "Shop via", "sublabel": "social media" }
+    "cards": [
+      {
+        "type": "product",
+        "id": "a05-product-1",
+        "title": "Resale Concierge",
+        "price": "$99",
+        "ctaLabel": "Shop drop",
+        "url": "https://www.forbes.com/style/",
+        "badge": "Limited"
+      },
+      {
+        "type": "kpi",
+        "id": "a05-kpi-1",
+        "value": "40%",
+        "label": "Luxury growth",
+        "sublabel": "Gen Z driven"
+      },
+      {
+        "type": "journey",
+        "id": "a05-journey-1",
+        "title": "Style Membership",
+        "description": "Curated weekly picks",
+        "ctaLabel": "Join now",
+        "url": "https://www.forbes.com/newsletter/"
+      }
     ]
   },
   {
@@ -149,10 +253,30 @@
       "shares": 1500,
       "bookmarks": 4800
     },
-    "kpis": [
-      { "value": "$2K", "label": "Launch cost", "sublabel": "per kg" },
-      { "value": "12K+", "label": "Active", "sublabel": "satellites" },
-      { "value": "$1.8T", "label": "Space economy", "sublabel": "by 2035" }
+    "cards": [
+      {
+        "type": "kpi",
+        "id": "a06-kpi-1",
+        "value": "$1.8T",
+        "label": "Space economy",
+        "sublabel": "by 2035"
+      },
+      {
+        "type": "journey",
+        "id": "a06-journey-1",
+        "title": "Investor Briefing",
+        "description": "Space sector deep dive",
+        "ctaLabel": "View briefing",
+        "url": "https://www.forbes.com/innovation/"
+      },
+      {
+        "type": "product",
+        "id": "a06-product-1",
+        "title": "Orbital Data Kit",
+        "price": "$149",
+        "ctaLabel": "Buy report",
+        "url": "https://www.forbes.com/connect/"
+      }
     ]
   },
   {
@@ -175,10 +299,31 @@
       "shares": 2200,
       "bookmarks": 8100
     },
-    "kpis": [
-      { "value": "58%", "label": "Wearable", "sublabel": "adoption rate" },
-      { "value": "50%", "label": "Faster", "sublabel": "diagnostics" },
-      { "value": "$320B", "label": "Digital health", "sublabel": "market size" }
+    "cards": [
+      {
+        "type": "product",
+        "id": "a07-product-1",
+        "title": "Genome Insights",
+        "price": "$129",
+        "ctaLabel": "Order kit",
+        "url": "https://www.forbes.com/health/",
+        "badge": "Partner"
+      },
+      {
+        "type": "kpi",
+        "id": "a07-kpi-1",
+        "value": "58%",
+        "label": "Wearable",
+        "sublabel": "adoption rate"
+      },
+      {
+        "type": "journey",
+        "id": "a07-journey-1",
+        "title": "Wellness Pathway",
+        "description": "Personalized care plan",
+        "ctaLabel": "Start path",
+        "url": "https://www.forbes.com/newsletter/"
+      }
     ]
   },
   {
@@ -201,10 +346,30 @@
       "shares": 3800,
       "bookmarks": 3900
     },
-    "kpis": [
-      { "value": "28%", "label": "Institutional", "sublabel": "holdings growth" },
-      { "value": "$16T", "label": "Tokenized assets", "sublabel": "potential" },
-      { "value": "140", "label": "Countries", "sublabel": "with frameworks" }
+    "cards": [
+      {
+        "type": "kpi",
+        "id": "a08-kpi-1",
+        "value": "28%",
+        "label": "Institutional",
+        "sublabel": "holdings growth"
+      },
+      {
+        "type": "journey",
+        "id": "a08-journey-1",
+        "title": "Crypto Compliance Hub",
+        "description": "Regulatory checklist",
+        "ctaLabel": "Open hub",
+        "url": "https://www.forbes.com/crypto-blockchain/"
+      },
+      {
+        "type": "product",
+        "id": "a08-product-1",
+        "title": "Markets Alert Pro",
+        "price": "$39/mo",
+        "ctaLabel": "Subscribe",
+        "url": "https://www.forbes.com/advisor/"
+      }
     ]
   },
   {
@@ -227,10 +392,31 @@
       "shares": 1700,
       "bookmarks": 5600
     },
-    "kpis": [
-      { "value": "3.5M", "label": "Open roles", "sublabel": "worldwide" },
-      { "value": "74%", "label": "Firms report", "sublabel": "skill gaps" },
-      { "value": "$10.5T", "label": "Cybercrime cost", "sublabel": "by 2025" }
+    "cards": [
+      {
+        "type": "product",
+        "id": "a09-product-1",
+        "title": "Zero-Trust Bootcamp",
+        "price": "$299",
+        "ctaLabel": "Enroll",
+        "url": "https://www.forbes.com/education/",
+        "badge": "Sponsored"
+      },
+      {
+        "type": "kpi",
+        "id": "a09-kpi-1",
+        "value": "3.5M",
+        "label": "Open roles",
+        "sublabel": "worldwide"
+      },
+      {
+        "type": "journey",
+        "id": "a09-journey-1",
+        "title": "Skills Roadmap",
+        "description": "Build your security career",
+        "ctaLabel": "Explore",
+        "url": "https://www.forbes.com/careers/"
+      }
     ]
   },
   {
@@ -253,10 +439,31 @@
       "shares": 1200,
       "bookmarks": 4200
     },
-    "kpis": [
-      { "value": "45%", "label": "Digital SMB", "sublabel": "account growth" },
-      { "value": "72hr", "label": "Average loan", "sublabel": "approval time" },
-      { "value": "$1.2T", "label": "SMB lending", "sublabel": "market" }
+    "cards": [
+      {
+        "type": "journey",
+        "id": "a10-journey-1",
+        "title": "Open Business Account",
+        "description": "Compare digital banks",
+        "ctaLabel": "Compare",
+        "url": "https://www.forbes.com/advisor/banking/"
+      },
+      {
+        "type": "product",
+        "id": "a10-product-1",
+        "title": "Cashflow Pro",
+        "price": "$24/mo",
+        "ctaLabel": "Try free",
+        "url": "https://www.forbes.com/advisor/",
+        "badge": "Partner"
+      },
+      {
+        "type": "kpi",
+        "id": "a10-kpi-1",
+        "value": "45%",
+        "label": "Digital SMB",
+        "sublabel": "account growth"
+      }
     ]
   }
 ]

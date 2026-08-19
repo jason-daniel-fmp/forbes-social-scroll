@@ -28,7 +28,7 @@ export function ArticleScreen({ article, headerInset, isLast = false }: ArticleS
           avatarSource={avatarSource}
         />
         <ArticleRow2 paragraphs={article.paragraphs} interactions={article.interactions} />
-        <ArticleRow3 kpis={article.kpis} />
+        <ArticleRow3 cards={article.cards} />
       </View>
       <SwipeHint message={isLast ? "You're all caught up" : 'Swipe ↑ for next article'} />
     </View>

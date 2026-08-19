@@ -20,11 +20,13 @@
   "peerDependencies": {
     "@expo/vector-icons": ">=14.0.0",
     "react": ">=18.0.0",
-    "react-native": ">=0.76.0"
+    "react-native": ">=0.76.0",
+    "react-native-webview": ">=13.0.0"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.4",
     "@forbes/theme": "workspace:*",
-    "@forbes/types": "workspace:*"
+    "@forbes/types": "workspace:*",
+    "react-native-webview": "^14.0.1"
   }
 }

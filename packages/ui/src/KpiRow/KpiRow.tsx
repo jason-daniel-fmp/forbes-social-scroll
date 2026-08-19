@@ -17,7 +17,7 @@ export function KpiRow({ kpis }: KpiRowProps) {
   return (
     <View style={styles.row}>
       {kpis.map((kpi) => (
-        <KpiCard key={`${kpi.value}-${kpi.label}`} kpi={kpi} />
+        <KpiCard key={kpi.id} kpi={kpi} />
       ))}
     </View>
   );
