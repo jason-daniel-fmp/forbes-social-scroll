@@ -9,7 +9,9 @@
     "lint": "turbo run lint",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
-    "clean": "turbo run clean"
+    "clean": "turbo run clean",
+    "android": "expo run:android",
+    "ios": "expo run:ios"
   },
   "devDependencies": {
     "@types/node": "latest",
@@ -21,5 +23,10 @@
     "turbo": "latest",
     "typescript": "^5.9.0",
     "typescript-eslint": "latest"
+  },
+  "dependencies": {
+    "expo": "~52.0.49",
+    "react": "18.3.1",
+    "react-native": "0.76.9"
   }
 }
