@@ -1,0 +1,1 @@
+export { JourneyDiscoveryCard } from './JourneyDiscoveryCard';

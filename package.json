@@ -10,6 +10,7 @@
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "clean": "turbo run clean",
+    "test": "turbo run test",
     "android": "expo run:android",
     "ios": "expo run:ios"
   },
