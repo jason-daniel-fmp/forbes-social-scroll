@@ -61,7 +61,6 @@ export function JourneyWebView({
 
   const handleHttpError = useCallback(() => {
     setIsLoading(false);
-    setHasError(true);
   }, []);
 
   const handleRetry = useCallback(() => {
@@ -136,6 +135,12 @@ export function JourneyWebView({
                 source={{ uri: url }}
                 style={styles.webview}
                 startInLoadingState
+                javaScriptEnabled
+                domStorageEnabled
+                sharedCookiesEnabled
+                thirdPartyCookiesEnabled
+                originWhitelist={['*']}
+                setSupportMultipleWindows={false}
                 onLoadStart={handleLoadStart}
                 onLoadEnd={handleLoadEnd}
                 onError={handleError}

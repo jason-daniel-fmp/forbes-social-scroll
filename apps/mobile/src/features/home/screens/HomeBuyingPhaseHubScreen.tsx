@@ -17,11 +17,6 @@ export function HomeBuyingPhaseHubScreen({ onBack, onSelectPhase }: HomeBuyingPh
   const { theme } = useTheme();
   const styles = createHomeBuyingPhaseHubStyles(theme);
 
-  const [topRow, bottomRow] = [
-    homeBuyingPhaseOptions.slice(0, 2),
-    homeBuyingPhaseOptions.slice(2, 4),
-  ];
-
   const renderPhaseButton = (phase: (typeof homeBuyingPhaseOptions)[number]) => (
     <TouchableOpacity
       key={phase.id}
@@ -40,6 +35,8 @@ export function HomeBuyingPhaseHubScreen({ onBack, onSelectPhase }: HomeBuyingPh
     </TouchableOpacity>
   );
 
+  const rows = [homeBuyingPhaseOptions.slice(0, 2), homeBuyingPhaseOptions.slice(2, 4)];
+
   return (
     <View style={styles.container}>
       <NavBar onBack={onBack} backLabel="Goals" />
@@ -51,8 +48,11 @@ export function HomeBuyingPhaseHubScreen({ onBack, onSelectPhase }: HomeBuyingPh
         </Text>
 
         <View style={styles.grid}>
-          <View style={styles.row}>{topRow.map(renderPhaseButton)}</View>
-          <View style={styles.row}>{bottomRow.map(renderPhaseButton)}</View>
+          {rows.map((row) => (
+            <View key={row.map((phase) => phase.id).join('-')} style={styles.row}>
+              {row.map(renderPhaseButton)}
+            </View>
+          ))}
         </View>
       </View>
     </View>

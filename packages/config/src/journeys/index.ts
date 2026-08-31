@@ -1,8 +1,10 @@
 export { placeholderUrl, PLACEHOLDER_URL_BASE } from './placeholders';
 export {
+  HOME_BUYING_URLS,
   businessJourney,
   financialRecoveryJourney,
   homeJourney,
+  homeBuyingPhases,
   journeyDefinitions,
 } from './definitions';
 export {

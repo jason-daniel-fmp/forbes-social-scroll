@@ -2,9 +2,7 @@ import { StyleSheet } from 'react-native';
 
 import type { Theme } from '@forbes/theme';
 
-export function createHomeBuyingPhaseHubStyles(theme: Theme) {
-  const tileGap = theme.layout.screenPaddingHorizontal;
-
+export function createHomeBuyingPhaseToolsStyles(theme: Theme) {
   return StyleSheet.create({
     container: {
       flex: 1,
@@ -12,9 +10,9 @@ export function createHomeBuyingPhaseHubStyles(theme: Theme) {
     },
     content: {
       flex: 1,
-      paddingHorizontal: tileGap,
+      paddingHorizontal: theme.layout.screenPaddingHorizontal,
       paddingTop: theme.spacing.lg,
-      paddingBottom: tileGap,
+      paddingBottom: theme.spacing.xl,
     },
     title: {
       color: theme.colors.textPrimary,
@@ -26,47 +24,30 @@ export function createHomeBuyingPhaseHubStyles(theme: Theme) {
       color: theme.colors.textSecondary,
       fontSize: theme.typography.subtitle + 2,
       lineHeight: 22,
-      marginBottom: tileGap,
+      marginBottom: theme.spacing.xl,
     },
-    grid: {
-      gap: tileGap,
-    },
-    row: {
-      flexDirection: 'row',
-      gap: tileGap,
-    },
-    phaseButton: {
+    options: {
       flex: 1,
-      aspectRatio: 1,
+      gap: theme.spacing.md,
+    },
+    optionButton: {
       borderWidth: 1,
       borderColor: theme.colors.accent,
-      borderRadius: 16,
+      borderRadius: 12,
       backgroundColor: theme.colors.surface,
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: theme.spacing.md,
+      paddingHorizontal: theme.spacing.lg,
+      paddingVertical: theme.spacing.lg,
     },
-    iconWrap: {
-      width: 56,
-      height: 56,
-      borderRadius: 28,
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: theme.colors.background,
-      marginBottom: theme.spacing.md,
-    },
-    phaseTitle: {
+    optionTitle: {
       color: theme.colors.textPrimary,
       fontSize: theme.typography.title,
       fontWeight: '700',
       marginBottom: theme.spacing.xs,
-      textAlign: 'center',
     },
-    phaseSubtitle: {
+    optionDescription: {
       color: theme.colors.textSecondary,
-      fontSize: theme.typography.body,
+      fontSize: theme.typography.body + 1,
       lineHeight: 18,
-      textAlign: 'center',
     },
   });
 }

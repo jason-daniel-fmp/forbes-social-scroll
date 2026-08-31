@@ -109,14 +109,14 @@ export function JourneyProvider({ children }: JourneyProviderProps) {
         return undefined;
       }
 
-      await updateJourneyState(journeyId, (current) => markStepOpened(current, stepId));
-
       setWebViewSession({
         journeyId,
         stepId: step.id,
         url: step.url,
         title: step.title,
       });
+
+      await updateJourneyState(journeyId, (current) => markStepOpened(current, stepId));
 
       return step;
     },
