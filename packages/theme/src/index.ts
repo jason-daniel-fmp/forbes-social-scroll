@@ -1,5 +1,5 @@
 export { ThemeProvider, useTheme } from './ThemeContext';
-export { darkTheme, lightTheme } from './themes/index';
+export { advisorSem2026Theme, healthTheme } from './themes/index';
 export type {
   Theme,
   ThemeColors,

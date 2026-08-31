@@ -1,6 +1,6 @@
 import { createContext, useContext, useMemo, useState, type ReactNode } from 'react';
 
-import { darkTheme, lightTheme } from './themes/index';
+import { advisorSem2026Theme, healthTheme } from './themes/index';
 import type { Theme, ThemeName } from './theme.types';
 
 interface ThemeContextValue {
@@ -11,8 +11,8 @@ interface ThemeContextValue {
 }
 
 const themes: Record<ThemeName, Theme> = {
-  dark: darkTheme,
-  light: lightTheme,
+  'advisor-sem-2026': advisorSem2026Theme,
+  health: healthTheme,
 };
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
@@ -22,7 +22,10 @@ interface ThemeProviderProps {
   initialTheme?: ThemeName;
 }
 
-export function ThemeProvider({ children, initialTheme = 'dark' }: ThemeProviderProps) {
+export function ThemeProvider({
+  children,
+  initialTheme = 'advisor-sem-2026',
+}: ThemeProviderProps) {
   const [themeName, setThemeName] = useState<ThemeName>(initialTheme);
 
   const value = useMemo<ThemeContextValue>(
@@ -30,7 +33,8 @@ export function ThemeProvider({ children, initialTheme = 'dark' }: ThemeProvider
       theme: themes[themeName],
       themeName,
       setThemeName,
-      toggleTheme: () => setThemeName((current) => (current === 'dark' ? 'light' : 'dark')),
+      toggleTheme: () =>
+        setThemeName((current) => (current === 'advisor-sem-2026' ? 'health' : 'advisor-sem-2026')),
     }),
     [themeName],
   );

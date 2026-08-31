@@ -1,0 +1,65 @@
+[
+  {
+    "id": "financial-article-01",
+    "title": "When Debt Feels Overwhelming",
+    "subtitle": "You're not alone — and there are structured ways to assess your situation.",
+    "editor": {
+      "name": "Emily Watson",
+      "role": "Personal Finance Editor, Forbes Advisor",
+      "avatarKey": "author-04"
+    },
+    "paragraphs": [
+      "Many households carry multiple balances across cards, loans, and medical bills.",
+      "Understanding the full picture is the first step toward a realistic plan.",
+      "A quick assessment can clarify options you may not have considered."
+    ],
+    "interactions": {
+      "likes": 5100,
+      "shares": 920,
+      "bookmarks": 2400
+    },
+    "cards": []
+  },
+  {
+    "id": "financial-article-02",
+    "title": "Debt Relief Options Explained",
+    "subtitle": "From consolidation to structured programs — what each path typically involves.",
+    "editor": {
+      "name": "Priya Kapoor",
+      "role": "Debt Editor, Forbes Advisor",
+      "avatarKey": "author-05"
+    },
+    "paragraphs": [
+      "Not every option fits every situation.",
+      "Fees, timelines, and credit impact vary widely between approaches.",
+      "Compare paths before committing to a long-term plan."
+    ],
+    "interactions": {
+      "likes": 4300,
+      "shares": 780,
+      "bookmarks": 1900
+    },
+    "cards": []
+  },
+  {
+    "id": "financial-article-03",
+    "title": "Building A Recovery Plan",
+    "subtitle": "Small, consistent steps can change your financial trajectory.",
+    "editor": {
+      "name": "Michael Torres",
+      "role": "Financial Wellness Editor, Forbes Advisor",
+      "avatarKey": "author-03"
+    },
+    "paragraphs": [
+      "Recovery plans work best when they match your income and priorities.",
+      "Track progress monthly rather than expecting overnight change.",
+      "Support tools can help you stay on course."
+    ],
+    "interactions": {
+      "likes": 3600,
+      "shares": 640,
+      "bookmarks": 1600
+    },
+    "cards": []
+  }
+]

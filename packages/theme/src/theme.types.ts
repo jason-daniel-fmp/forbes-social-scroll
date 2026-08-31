@@ -52,12 +52,14 @@ export interface ThemeSpacing {
   xl: number;
 }
 
+export type ThemeName = 'advisor-sem-2026' | 'health';
+
 export interface Theme {
-  name: 'dark' | 'light';
+  name: ThemeName;
+  label: string;
+  statusBarStyle: 'light' | 'dark';
   colors: ThemeColors;
   typography: ThemeTypography;
   layout: ThemeLayout;
   spacing: ThemeSpacing;
 }
-
-export type ThemeName = Theme['name'];

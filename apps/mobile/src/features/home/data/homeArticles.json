@@ -1,0 +1,65 @@
+[
+  {
+    "id": "home-article-01",
+    "title": "Can You Afford To Buy A Home?",
+    "subtitle": "A practical starting point before you browse listings.",
+    "editor": {
+      "name": "Jason Shah",
+      "role": "Personal Finance Editor, Forbes Advisor",
+      "avatarKey": "author-01"
+    },
+    "paragraphs": [
+      "Most buyers start with a monthly payment target, not a list price.",
+      "Your down payment, debts, and location all change what is realistic.",
+      "A few quick estimates can save months of guessing."
+    ],
+    "interactions": {
+      "likes": 4200,
+      "shares": 890,
+      "bookmarks": 2100
+    },
+    "cards": []
+  },
+  {
+    "id": "home-article-02",
+    "title": "Mortgage Rates And Monthly Payments",
+    "subtitle": "Why small rate changes can shift your buying power.",
+    "editor": {
+      "name": "Sarah Chen",
+      "role": "Housing Editor, Forbes Advisor",
+      "avatarKey": "author-02"
+    },
+    "paragraphs": [
+      "Monthly payment matters more than the sticker price for most households.",
+      "Insurance, taxes, and HOA fees belong in the same calculation.",
+      "Compare scenarios before you fall in love with a property."
+    ],
+    "interactions": {
+      "likes": 3800,
+      "shares": 640,
+      "bookmarks": 1800
+    },
+    "cards": []
+  },
+  {
+    "id": "home-article-03",
+    "title": "From Search To Closing",
+    "subtitle": "What the full home-buying journey usually looks like.",
+    "editor": {
+      "name": "Michael Torres",
+      "role": "Real Estate Editor, Forbes Advisor",
+      "avatarKey": "author-03"
+    },
+    "paragraphs": [
+      "Pre-approval, search, offer, inspection, and closing each have their own timeline.",
+      "Knowing the sequence reduces surprises late in the process.",
+      "The right next step depends on where you are today."
+    ],
+    "interactions": {
+      "likes": 2900,
+      "shares": 510,
+      "bookmarks": 1500
+    },
+    "cards": []
+  }
+]

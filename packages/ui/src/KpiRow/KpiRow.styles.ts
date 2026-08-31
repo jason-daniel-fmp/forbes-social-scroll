@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 import type { Theme } from '@forbes/theme';
 
-export function createKpiRowStyles(theme: Theme) {
+export function createKpiRowStyles(_theme: Theme) {
   return StyleSheet.create({
     row: {
       flexDirection: 'row',

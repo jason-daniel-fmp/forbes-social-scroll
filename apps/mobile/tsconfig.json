@@ -9,6 +9,7 @@
   },
   "include": ["App.tsx", "src", "src/**/*.json"],
   "references": [
+    { "path": "../../packages/config" },
     { "path": "../../packages/theme" },
     { "path": "../../packages/types" },
     { "path": "../../packages/ui" }

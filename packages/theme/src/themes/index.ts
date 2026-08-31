@@ -1,2 +1,2 @@
-export { darkTheme } from './dark.theme';
-export { lightTheme } from './light.theme';
+export { advisorSem2026Theme } from './advisor-sem-2026.theme';
+export { healthTheme } from './health.theme';
