@@ -3,6 +3,7 @@ import { Modal, Pressable, ScrollView, Text, TouchableOpacity, View } from 'reac
 import { useTheme } from '@forbes/theme';
 import type { JourneyStepProgressLabel } from '@forbes/types';
 
+import { ActionLink } from '../ActionLink';
 import { createJourneyProgressSheetStyles } from './JourneyProgressSheet.styles';
 
 export interface JourneyProgressSheetItem {
@@ -126,15 +127,9 @@ export function JourneyProgressSheet({
             ))}
           </ScrollView>
 
-          <TouchableOpacity
-            style={styles.closeButton}
-            onPress={onClose}
-            activeOpacity={0.7}
-            accessibilityRole="button"
-            accessibilityLabel="Close"
-          >
-            <Text style={styles.closeText}>Close</Text>
-          </TouchableOpacity>
+          <View style={styles.closeButton}>
+            <ActionLink label="Close" onPress={onClose} accessibilityLabel="Close" />
+          </View>
         </View>
       </View>
     </Modal>

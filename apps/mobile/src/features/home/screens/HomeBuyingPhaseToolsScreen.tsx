@@ -1,8 +1,8 @@
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Text, View } from 'react-native';
 
-import { useTheme } from '@forbes/theme';
-import { NavBar } from '@forbes/ui';
+import { NavBar, PathCard } from '@forbes/ui';
 
+import { paletteForHomeTool } from '../data/homeJourneyTheme';
 import type { HomeBuyingPhaseOption, HomeBuyingPhaseTool } from '../data/homeBuyingPhases';
 import { createHomeBuyingPhaseToolsStyles } from './HomeBuyingPhaseToolsScreen.styles';
 
@@ -17,8 +17,7 @@ export function HomeBuyingPhaseToolsScreen({
   onBack,
   onOpenTool,
 }: HomeBuyingPhaseToolsScreenProps) {
-  const { theme } = useTheme();
-  const styles = createHomeBuyingPhaseToolsStyles(theme);
+  const styles = createHomeBuyingPhaseToolsStyles();
 
   return (
     <View style={styles.container}>
@@ -29,17 +28,17 @@ export function HomeBuyingPhaseToolsScreen({
         <Text style={styles.subtitle}>{phase.subtitle}</Text>
 
         <View style={styles.options}>
-          {phase.tools.map((tool) => (
-            <TouchableOpacity
+          {phase.tools.map((tool, index) => (
+            <PathCard
               key={tool.id}
-              style={styles.optionButton}
+              title={tool.title}
+              description={tool.description}
+              ctaLabel="Open"
+              density="compact"
+              palette={paletteForHomeTool(index)}
               onPress={() => onOpenTool(tool)}
-              accessibilityRole="button"
               accessibilityLabel={tool.title}
-            >
-              <Text style={styles.optionTitle}>{tool.title}</Text>
-              <Text style={styles.optionDescription}>{tool.description}</Text>
-            </TouchableOpacity>
+            />
           ))}
         </View>
       </View>

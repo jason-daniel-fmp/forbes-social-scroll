@@ -39,19 +39,7 @@ export function createJourneyCardStyles(theme: Theme) {
       textAlign: 'center',
       marginTop: 2,
       flexShrink: 1,
-    },
-    cta: {
-      marginTop: theme.spacing.xs,
-      paddingHorizontal: theme.spacing.sm,
-      paddingVertical: 3,
-      borderWidth: 1,
-      borderColor: theme.colors.accent,
-      borderRadius: 4,
-    },
-    ctaText: {
-      color: theme.colors.accent,
-      fontSize: theme.typography.kpiLabel,
-      fontWeight: '700',
+      marginBottom: theme.spacing.xs,
     },
   });
 }

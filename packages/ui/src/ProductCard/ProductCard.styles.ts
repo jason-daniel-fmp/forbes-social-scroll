@@ -38,18 +38,7 @@ export function createProductCardStyles(theme: Theme) {
       fontSize: theme.typography.kpiValue - 4,
       fontWeight: '700',
       marginTop: theme.spacing.xs,
-    },
-    cta: {
-      marginTop: theme.spacing.xs,
-      paddingHorizontal: theme.spacing.sm,
-      paddingVertical: 3,
-      backgroundColor: theme.colors.accent,
-      borderRadius: 4,
-    },
-    ctaText: {
-      color: '#FFFFFF',
-      fontSize: theme.typography.kpiLabel,
-      fontWeight: '700',
+      marginBottom: theme.spacing.xs,
     },
   });
 }

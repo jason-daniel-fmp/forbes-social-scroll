@@ -3,8 +3,6 @@ import {
   FlatList,
   InteractionManager,
   StyleSheet,
-  Text,
-  TouchableOpacity,
   View,
   type LayoutChangeEvent,
   type ListRenderItem,
@@ -14,7 +12,7 @@ import {
 
 import { getContinueJourneyContent, getJourneyById } from '@forbes/config';
 import { useTheme } from '@forbes/theme';
-import { ContinueJourneyCard, JourneyDiscoveryCard, NavBar } from '@forbes/ui';
+import { ActionLink, ContinueJourneyCard, JourneyDiscoveryCard, NavBar } from '@forbes/ui';
 import type { JourneyId } from '@forbes/types';
 
 import { getFeedItemKey, type FeedItem } from '../feed';
@@ -116,11 +114,15 @@ export function ScrollFeed({
 
   const themeToggle = useMemo(
     () => (
-      <TouchableOpacity style={styles.themeToggle} onPress={toggleTheme} accessibilityRole="button">
-        <Text style={styles.themeToggleText}>{theme.label}</Text>
-      </TouchableOpacity>
+      <ActionLink
+        label={theme.label}
+        onPress={toggleTheme}
+        size="compact"
+        trailingArrow={false}
+        accessibilityLabel={`Switch theme from ${theme.label}`}
+      />
     ),
-    [styles.themeToggle, styles.themeToggleText, theme.label, toggleTheme],
+    [theme.label, toggleTheme],
   );
 
   const handleDiscoveryPress = useCallback(

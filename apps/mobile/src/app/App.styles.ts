@@ -8,6 +8,9 @@ export function createAppStyles(theme: Theme) {
       flex: 1,
       backgroundColor: theme.colors.background,
     },
+    landingRoot: {
+      backgroundColor: '#000000',
+    },
     debugBar: {
       paddingHorizontal: theme.spacing.md,
       paddingVertical: theme.spacing.sm,

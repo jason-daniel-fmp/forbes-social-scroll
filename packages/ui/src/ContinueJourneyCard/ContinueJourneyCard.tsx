@@ -1,7 +1,8 @@
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import { useTheme } from '@forbes/theme';
 
+import { ActionLink } from '../ActionLink';
 import { JourneyProgressCard, type JourneyProgressItem } from '../JourneyProgressCard';
 import { createContinueJourneyCardStyles } from './ContinueJourneyCard.styles';
 
@@ -40,15 +41,14 @@ export function ContinueJourneyCard({
 
       <JourneyProgressCard items={progressItems} />
 
-      <TouchableOpacity
-        style={styles.cta}
-        onPress={onPress}
-        delayPressIn={150}
-        accessibilityRole="button"
-        accessibilityLabel={ctaLabel}
-      >
-        <Text style={styles.ctaText}>{ctaLabel}</Text>
-      </TouchableOpacity>
+      <View style={styles.cta}>
+        <ActionLink
+          label={ctaLabel}
+          onPress={onPress}
+          delayPressIn={150}
+          accessibilityLabel={ctaLabel}
+        />
+      </View>
     </View>
   );
 }

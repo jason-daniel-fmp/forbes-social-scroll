@@ -1,6 +1,6 @@
 import type { Theme } from '../theme.types';
 
-import { sharedLayout, sharedSpacing, sharedTypography } from './shared';
+import { sharedEditorialTypography, sharedLayout, sharedSpacing, sharedTypography } from './shared';
 
 /**
  * Forbes Health palette, mapped from
@@ -36,6 +36,7 @@ export const healthTheme: Theme = {
     headerLogo: '#1E2125',
   },
   typography: sharedTypography,
+  editorialTypography: sharedEditorialTypography,
   layout: sharedLayout,
   spacing: sharedSpacing,
 };

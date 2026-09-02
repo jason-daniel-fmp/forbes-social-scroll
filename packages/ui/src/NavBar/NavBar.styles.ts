@@ -19,6 +19,11 @@ export function createNavBarStyles(theme: Theme) {
       alignItems: 'flex-start',
       justifyContent: 'center',
     },
+    sideRight: {
+      flex: 1,
+      alignItems: 'flex-end',
+      justifyContent: 'center',
+    },
     center: {
       flex: 1.2,
       alignItems: 'center',
@@ -30,18 +35,6 @@ export function createNavBarStyles(theme: Theme) {
       fontWeight: '700',
       letterSpacing: 1,
       fontFamily: 'Georgia',
-    },
-    backButton: {
-      paddingHorizontal: theme.spacing.sm,
-      paddingVertical: theme.spacing.xs,
-      borderWidth: 1,
-      borderColor: theme.colors.accent,
-      borderRadius: 4,
-    },
-    backButtonText: {
-      color: theme.colors.accent,
-      fontSize: theme.typography.swipeHint,
-      fontWeight: '700',
     },
   });
 }

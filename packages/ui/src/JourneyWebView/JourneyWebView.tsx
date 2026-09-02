@@ -1,10 +1,11 @@
 import { useCallback, useMemo, useState } from 'react';
-import { ActivityIndicator, Modal, SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, Modal, SafeAreaView, Text, View } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 import { useTheme } from '@forbes/theme';
 import type { JourneyId } from '@forbes/types';
 
+import { ActionLink } from '../ActionLink';
 import { createJourneyWebViewStyles } from './JourneyWebView.styles';
 
 export interface JourneyWebViewProps {
@@ -87,16 +88,13 @@ export function JourneyWebView({
           <Text style={styles.title} numberOfLines={1}>
             {title}
           </Text>
-          <TouchableOpacity
-            style={styles.closeButton}
+          <ActionLink
+            label="← Back"
             onPress={handleClose}
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-            activeOpacity={0.7}
-            accessibilityRole="button"
+            size="compact"
+            trailingArrow={false}
             accessibilityLabel="Go back to previous step"
-          >
-            <Text style={styles.closeText}>← Back</Text>
-          </TouchableOpacity>
+          />
         </View>
 
         {!urlIsValid ? (
@@ -105,13 +103,7 @@ export function JourneyWebView({
             <Text style={styles.stateMessage}>
               This step is not available yet. Please try again later.
             </Text>
-            <TouchableOpacity
-              style={styles.retryButton}
-              onPress={handleClose}
-              accessibilityRole="button"
-            >
-              <Text style={styles.retryText}>Go back</Text>
-            </TouchableOpacity>
+            <ActionLink label="Go back" onPress={handleClose} />
           </View>
         ) : hasError ? (
           <View style={styles.stateContainer}>
@@ -119,13 +111,7 @@ export function JourneyWebView({
             <Text style={styles.stateMessage}>
               We could not load this experience. Check your connection and try again.
             </Text>
-            <TouchableOpacity
-              style={styles.retryButton}
-              onPress={handleRetry}
-              accessibilityRole="button"
-            >
-              <Text style={styles.retryText}>Retry</Text>
-            </TouchableOpacity>
+            <ActionLink label="Retry" onPress={handleRetry} />
           </View>
         ) : (
           <View style={styles.webviewContainer}>

@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import { useTheme } from '@forbes/theme';
 
+import { ActionLink } from '../ActionLink';
 import { createNavBarStyles } from './NavBar.styles';
 
 interface NavBarProps {
@@ -19,16 +20,14 @@ export function NavBar({ onBack, backLabel = 'Back', rightSlot }: NavBarProps) {
     <View style={styles.bar}>
       <View style={styles.side}>
         {onBack ? (
-          <TouchableOpacity
-            style={styles.backButton}
+          <ActionLink
+            label={`← ${backLabel}`}
             onPress={onBack}
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-            activeOpacity={0.7}
-            accessibilityRole="button"
+            color={theme.colors.textPrimary}
+            size="compact"
+            trailingArrow={false}
             accessibilityLabel={backLabel}
-          >
-            <Text style={styles.backButtonText}>← {backLabel}</Text>
-          </TouchableOpacity>
+          />
         ) : null}
       </View>
 
@@ -36,7 +35,7 @@ export function NavBar({ onBack, backLabel = 'Back', rightSlot }: NavBarProps) {
         <Text style={styles.logoText}>Forbes</Text>
       </View>
 
-      <View style={styles.side}>{rightSlot}</View>
+      <View style={styles.sideRight}>{rightSlot}</View>
     </View>
   );
 }

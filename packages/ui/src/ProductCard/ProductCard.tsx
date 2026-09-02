@@ -1,8 +1,9 @@
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 
 import { useTheme } from '@forbes/theme';
 import type { ArticleProductCta } from '@forbes/types';
 
+import { ActionLink } from '../ActionLink';
 import { createProductCardStyles } from './ProductCard.styles';
 
 interface ProductCardProps {
@@ -28,9 +29,7 @@ export function ProductCard({ product, onPress }: ProductCardProps) {
       <Text style={styles.price} numberOfLines={1}>
         {product.price}
       </Text>
-      <View style={styles.cta}>
-        <Text style={styles.ctaText}>{product.ctaLabel}</Text>
-      </View>
+      <ActionLink label={product.ctaLabel} color={theme.colors.textPrimary} size="compact" />
     </TouchableOpacity>
   );
 }

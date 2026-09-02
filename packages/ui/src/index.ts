@@ -1,4 +1,11 @@
+export { EditorialIndex } from './EditorialIndex/index';
 export { Header } from './Header/index';
+export { ActionLink } from './ActionLink/index';
+export { CircleIconButton } from './CircleIconButton/index';
+export { PathCard } from './PathCard/index';
+export type { PathCardPalette } from './PathCard/index';
+export { CollageGrid, CollageTile } from './CollageGrid/index';
+export type { CollageGridPlacement, CollageTileDensity } from './CollageGrid/index';
 export { NavBar } from './NavBar/index';
 export { TitleBlock } from './TitleBlock/index';
 export { AuthorBlock } from './AuthorBlock/index';

@@ -1,32 +1,28 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useState } from 'react';
 
-import { ScrollFeed } from '../../../shared/screens';
+import { PlaceholderPathScreen } from '../../placeholder';
 import { openForbesUrl } from '../browser/openForbesUrl';
 import { useHomePreference } from '../context';
 import type { HomeBuyingPhaseId, HomeBuyingPhaseTool } from '../data/homeBuyingPhases';
 import { getHomeBuyingPhaseOption } from '../data/homeBuyingPhases';
-import { buildHomeFeedItems } from '../feed/buildFeedItems';
-import { HomeBuyingPhaseHubScreen } from './HomeBuyingPhaseHubScreen';
+import { homeEditorialDestinations, homeEditorialIndex } from '../data/homeEditorialIndex';
 import { HomeBuyingPhaseToolsScreen } from './HomeBuyingPhaseToolsScreen';
 import { HomeBuyingWebViewScreen } from './HomeBuyingWebViewScreen';
 import { HomePreferenceScreen } from './HomePreferenceScreen';
 
-type HomeStep =
-  'preference' | 'buying-phase-hub' | 'buying-phase-detail' | 'buying-webview' | 'feed';
-
-const BUYING_STEPS: HomeStep[] = ['buying-phase-hub', 'buying-phase-detail', 'buying-webview'];
+type HomeStep = 'index' | 'buying-phase-detail' | 'buying-webview' | 'goal-placeholder';
 
 interface HomeFlowScreenProps {
   onBackToModes: () => void;
 }
 
 export function HomeFlowScreen({ onBackToModes }: HomeFlowScreenProps) {
-  const { preference, isHydrated, setHomeNeed } = useHomePreference();
-  const [step, setStep] = useState<HomeStep>('preference');
+  const { isHydrated, setHomeNeed } = useHomePreference();
+  const [step, setStep] = useState<HomeStep>('index');
   const [selectedPhaseId, setSelectedPhaseId] = useState<HomeBuyingPhaseId | null>(null);
   const [activeTool, setActiveTool] = useState<HomeBuyingPhaseTool | null>(null);
+  const [placeholderTitle, setPlaceholderTitle] = useState('Coming soon');
 
-  const feedItems = useMemo(() => buildHomeFeedItems({}, false), []);
   const selectedPhase = selectedPhaseId ? getHomeBuyingPhaseOption(selectedPhaseId) : undefined;
 
   const openTool = useCallback((tool: HomeBuyingPhaseTool) => {
@@ -39,7 +35,7 @@ export function HomeFlowScreen({ onBackToModes }: HomeFlowScreenProps) {
     });
   }, []);
 
-  const handleSelectPhase = useCallback(
+  const openPhase = useCallback(
     (phaseId: HomeBuyingPhaseId) => {
       const phase = getHomeBuyingPhaseOption(phaseId);
       if (!phase || phase.tools.length === 0) {
@@ -57,39 +53,40 @@ export function HomeFlowScreen({ onBackToModes }: HomeFlowScreenProps) {
     [openTool],
   );
 
-  useEffect(() => {
-    if (!isHydrated || !preference) {
-      return;
-    }
+  const handleCommit = useCallback(
+    (itemId: string) => {
+      const destination = homeEditorialDestinations[itemId];
+      const item = homeEditorialIndex.items.find((entry) => entry.id === itemId);
 
-    if (preference.need === 'buying') {
-      setStep((current) => (BUYING_STEPS.includes(current) ? current : 'buying-phase-hub'));
-      return;
-    }
+      if (itemId === 'buying' || itemId === 'afford') {
+        void setHomeNeed('buying');
+      } else if (itemId === 'mortgages') {
+        void setHomeNeed('mortgage');
+      } else if (itemId === 'moving') {
+        void setHomeNeed('moving');
+      } else if (itemId === 'selling') {
+        void setHomeNeed('selling');
+      } else if (itemId === 'find') {
+        void setHomeNeed('find');
+      }
 
-    setStep('feed');
-  }, [isHydrated, preference]);
+      if (!destination || destination.kind === 'placeholder') {
+        setPlaceholderTitle(item?.title ?? 'Coming soon');
+        setStep('goal-placeholder');
+        return;
+      }
+
+      openPhase(destination.phaseId);
+    },
+    [openPhase, setHomeNeed],
+  );
 
   if (!isHydrated) {
     return null;
   }
 
-  if (step === 'preference') {
-    return (
-      <HomePreferenceScreen
-        onBack={onBackToModes}
-        onSelect={async (need) => {
-          await setHomeNeed(need);
-          if (need === 'buying') {
-            setSelectedPhaseId(null);
-            setActiveTool(null);
-            setStep('buying-phase-hub');
-            return;
-          }
-          setStep('feed');
-        }}
-      />
-    );
+  if (step === 'index') {
+    return <HomePreferenceScreen onBack={onBackToModes} onSelect={handleCommit} />;
   }
 
   if (step === 'buying-webview' && activeTool) {
@@ -98,7 +95,7 @@ export function HomeFlowScreen({ onBackToModes }: HomeFlowScreenProps) {
         tool={activeTool}
         onBack={() => {
           setActiveTool(null);
-          setStep(selectedPhaseId ? 'buying-phase-detail' : 'buying-phase-hub');
+          setStep(selectedPhaseId ? 'buying-phase-detail' : 'index');
         }}
       />
     );
@@ -108,27 +105,17 @@ export function HomeFlowScreen({ onBackToModes }: HomeFlowScreenProps) {
     return (
       <HomeBuyingPhaseToolsScreen
         phase={selectedPhase}
-        onBack={() => setStep('buying-phase-hub')}
+        onBack={() => setStep('index')}
         onOpenTool={openTool}
       />
     );
   }
 
-  if (step === 'buying-phase-hub' || step === 'buying-phase-detail' || step === 'buying-webview') {
-    return (
-      <HomeBuyingPhaseHubScreen
-        onBack={() => setStep('preference')}
-        onSelectPhase={handleSelectPhase}
-      />
-    );
-  }
-
   return (
-    <ScrollFeed
-      feedId="home"
-      feedItems={feedItems}
-      onBack={() => setStep('preference')}
-      backLabel="Goals"
+    <PlaceholderPathScreen
+      title={placeholderTitle}
+      eyebrow="Home & Property"
+      onBack={() => setStep('index')}
     />
   );
 }

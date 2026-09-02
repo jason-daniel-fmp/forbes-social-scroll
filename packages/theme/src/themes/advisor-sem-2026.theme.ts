@@ -1,6 +1,6 @@
 import type { Theme } from '../theme.types';
 
-import { sharedLayout, sharedSpacing, sharedTypography } from './shared';
+import { sharedEditorialTypography, sharedLayout, sharedSpacing, sharedTypography } from './shared';
 
 /**
  * Forbes Advisor SEM 2026 palette, mapped from
@@ -38,6 +38,7 @@ export const advisorSem2026Theme: Theme = {
     headerLogo: '#1E2125',
   },
   typography: sharedTypography,
+  editorialTypography: sharedEditorialTypography,
   layout: sharedLayout,
   spacing: sharedSpacing,
 };

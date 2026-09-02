@@ -1,9 +1,9 @@
 import { useCallback, useState } from 'react';
-import { ActivityIndicator, Linking, Text, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, Linking, Text, View } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 import { useTheme } from '@forbes/theme';
-import { NavBar } from '@forbes/ui';
+import { ActionLink, NavBar } from '@forbes/ui';
 
 import { openForbesUrl } from '../browser/openForbesUrl';
 import type { HomeBuyingPhaseTool } from '../data/homeBuyingPhases';
@@ -61,13 +61,13 @@ export function HomeBuyingWebViewScreen({ tool, onBack }: HomeBuyingWebViewScree
         onBack={onBack}
         backLabel="Back"
         rightSlot={
-          <TouchableOpacity
+          <ActionLink
+            label="Safari"
             onPress={handleOpenInSafari}
-            accessibilityRole="button"
+            size="compact"
+            trailingArrow={false}
             accessibilityLabel="Open in Safari"
-          >
-            <Text style={styles.safariLink}>Safari</Text>
-          </TouchableOpacity>
+          />
         }
       />
 

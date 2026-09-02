@@ -1,53 +1,33 @@
 import { StyleSheet } from 'react-native';
 
-import type { Theme } from '@forbes/theme';
+import { homeJourneyCanvas } from '../data/homeJourneyTheme';
 
-export function createHomeBuyingPhaseToolsStyles(theme: Theme) {
+export function createHomeBuyingPhaseToolsStyles() {
   return StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: theme.colors.background,
+      backgroundColor: homeJourneyCanvas,
     },
     content: {
       flex: 1,
-      paddingHorizontal: theme.layout.screenPaddingHorizontal,
-      paddingTop: theme.spacing.lg,
-      paddingBottom: theme.spacing.xl,
+      paddingHorizontal: 16,
+      paddingTop: 16,
+      paddingBottom: 24,
     },
     title: {
-      color: theme.colors.textPrimary,
-      fontSize: theme.typography.title + 4,
+      color: '#1E2125',
+      fontSize: 26,
       fontWeight: '700',
-      marginBottom: theme.spacing.sm,
+      marginBottom: 8,
     },
     subtitle: {
-      color: theme.colors.textSecondary,
-      fontSize: theme.typography.subtitle + 2,
+      color: '#3C5C55',
+      fontSize: 15,
       lineHeight: 22,
-      marginBottom: theme.spacing.xl,
+      marginBottom: 24,
     },
     options: {
-      flex: 1,
-      gap: theme.spacing.md,
-    },
-    optionButton: {
-      borderWidth: 1,
-      borderColor: theme.colors.accent,
-      borderRadius: 12,
-      backgroundColor: theme.colors.surface,
-      paddingHorizontal: theme.spacing.lg,
-      paddingVertical: theme.spacing.lg,
-    },
-    optionTitle: {
-      color: theme.colors.textPrimary,
-      fontSize: theme.typography.title,
-      fontWeight: '700',
-      marginBottom: theme.spacing.xs,
-    },
-    optionDescription: {
-      color: theme.colors.textSecondary,
-      fontSize: theme.typography.body + 1,
-      lineHeight: 18,
+      gap: 12,
     },
   });
 }

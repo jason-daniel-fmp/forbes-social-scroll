@@ -52,16 +52,6 @@ export function createContinueJourneyCardStyles(theme: Theme) {
     },
     cta: {
       alignSelf: 'flex-start',
-      paddingHorizontal: theme.spacing.lg,
-      paddingVertical: theme.spacing.sm,
-      borderWidth: 1,
-      borderColor: theme.colors.accent,
-      borderRadius: 4,
-    },
-    ctaText: {
-      color: theme.colors.accent,
-      fontSize: theme.typography.subtitle,
-      fontWeight: '700',
     },
   });
 }
