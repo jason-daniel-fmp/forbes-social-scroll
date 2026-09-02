@@ -52,6 +52,16 @@ export interface ThemeSpacing {
   xl: number;
 }
 
+/** Display scale for the Editorial Index — not the article feed. */
+export interface ThemeEditorialTypography {
+  headline: number;
+  category: number;
+  categorySelected: number;
+  number: number;
+  descriptor: number;
+  meta: number;
+}
+
 export type ThemeName = 'advisor-sem-2026' | 'health';
 
 export interface Theme {
@@ -60,6 +70,7 @@ export interface Theme {
   statusBarStyle: 'light' | 'dark';
   colors: ThemeColors;
   typography: ThemeTypography;
+  editorialTypography: ThemeEditorialTypography;
   layout: ThemeLayout;
   spacing: ThemeSpacing;
 }

@@ -81,15 +81,8 @@ export function createJourneyProgressSheetStyles(theme: Theme) {
     closeButton: {
       marginTop: theme.spacing.lg,
       alignSelf: 'center',
-      paddingHorizontal: theme.spacing.lg,
-      paddingVertical: theme.spacing.sm,
       minHeight: 44,
       justifyContent: 'center',
-    },
-    closeText: {
-      color: theme.colors.accent,
-      fontSize: theme.typography.subtitle,
-      fontWeight: '600',
     },
   });
 }

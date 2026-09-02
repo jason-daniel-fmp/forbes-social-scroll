@@ -1,8 +1,9 @@
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import { useTheme } from '@forbes/theme';
 import type { JourneyDiscoveryContent } from '@forbes/types';
 
+import { ActionLink } from '../ActionLink';
 import { createJourneyDiscoveryCardStyles } from './JourneyDiscoveryCard.styles';
 
 interface JourneyDiscoveryCardProps {
@@ -19,15 +20,14 @@ export function JourneyDiscoveryCard({ content, onPress }: JourneyDiscoveryCardP
       <Text style={styles.eyebrow}>Journey</Text>
       <Text style={styles.title}>{content.title}</Text>
       <Text style={styles.description}>{content.description}</Text>
-      <TouchableOpacity
-        style={styles.cta}
-        onPress={onPress}
-        delayPressIn={150}
-        accessibilityRole="button"
-        accessibilityLabel={content.ctaLabel}
-      >
-        <Text style={styles.ctaText}>{content.ctaLabel}</Text>
-      </TouchableOpacity>
+      <View style={styles.cta}>
+        <ActionLink
+          label={content.ctaLabel}
+          onPress={onPress}
+          delayPressIn={150}
+          accessibilityLabel={content.ctaLabel}
+        />
+      </View>
     </View>
   );
 }

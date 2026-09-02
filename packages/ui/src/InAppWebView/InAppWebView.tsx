@@ -1,8 +1,9 @@
-import { Modal, SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
+import { Modal, SafeAreaView, Text, View } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 import { useTheme } from '@forbes/theme';
 
+import { ActionLink } from '../ActionLink';
 import { createInAppWebViewStyles } from './InAppWebView.styles';
 
 interface InAppWebViewProps {
@@ -28,9 +29,7 @@ export function InAppWebView({ visible, url, title, onClose }: InAppWebViewProps
           <Text style={styles.title} numberOfLines={1}>
             {title}
           </Text>
-          <TouchableOpacity style={styles.closeButton} onPress={onClose} accessibilityRole="button">
-            <Text style={styles.closeText}>Close</Text>
-          </TouchableOpacity>
+          <ActionLink label="Close" onPress={onClose} size="compact" />
         </View>
         {visible && url ? (
           <WebView source={{ uri: url }} style={styles.webview} startInLoadingState />

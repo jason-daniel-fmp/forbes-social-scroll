@@ -4,7 +4,12 @@ vi.mock('../feed/scrollPersistence', () => ({
   clearFeedScrollIndices: vi.fn(async () => undefined),
 }));
 
+vi.mock('../tiles/persistence', () => ({
+  clearTileClicks: vi.fn(async () => undefined),
+}));
+
 import { clearFeedScrollIndices } from '../feed/scrollPersistence';
+import { clearTileClicks } from '../tiles/persistence';
 import { resetDevAppState } from './resetDevAppState';
 
 describe('resetDevAppState', () => {
@@ -12,7 +17,7 @@ describe('resetDevAppState', () => {
     vi.clearAllMocks();
   });
 
-  it('clears journey progress, home preference, and feed scroll positions', async () => {
+  it('clears journey progress, home preference, feed scroll, and tile clicks', async () => {
     const resetJourneyProgress = vi.fn(async () => undefined);
     const clearHomePreference = vi.fn(async () => undefined);
 
@@ -21,5 +26,6 @@ describe('resetDevAppState', () => {
     expect(resetJourneyProgress).toHaveBeenCalledOnce();
     expect(clearHomePreference).toHaveBeenCalledOnce();
     expect(clearFeedScrollIndices).toHaveBeenCalledOnce();
+    expect(clearTileClicks).toHaveBeenCalledOnce();
   });
 });

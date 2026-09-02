@@ -20,18 +20,5 @@ export function createScrollFeedStyles(theme: Theme) {
     page: {
       overflow: 'hidden',
     },
-    themeToggle: {
-      paddingHorizontal: theme.spacing.sm,
-      paddingVertical: theme.spacing.xs,
-      borderWidth: 1,
-      borderColor: theme.colors.accent,
-      borderRadius: 4,
-      backgroundColor: theme.colors.headerBackground,
-    },
-    themeToggleText: {
-      color: theme.colors.accent,
-      fontSize: theme.typography.swipeHint,
-      fontWeight: '600',
-    },
   });
 }

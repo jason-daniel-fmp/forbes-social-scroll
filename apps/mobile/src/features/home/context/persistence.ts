@@ -1,6 +1,6 @@
 import { NativeModules } from 'react-native';
 
-import type { HomePreference } from '@forbes/types';
+import { isHomeNeed, type HomePreference } from '@forbes/types';
 
 const STORAGE_KEY = '@forbes/home-preference/v1';
 
@@ -31,7 +31,13 @@ export async function loadHomePreference(): Promise<HomePreference | null> {
       return null;
     }
 
-    memoryPreference = JSON.parse(raw) as HomePreference;
+    const parsed = JSON.parse(raw) as HomePreference;
+    if (!isHomeNeed(parsed.need)) {
+      memoryPreference = null;
+      return null;
+    }
+
+    memoryPreference = parsed;
     return memoryPreference;
   } catch {
     return memoryPreference;

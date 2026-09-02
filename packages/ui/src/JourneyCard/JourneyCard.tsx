@@ -1,8 +1,9 @@
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 
 import { useTheme } from '@forbes/theme';
 import type { ArticleJourneyCta } from '@forbes/types';
 
+import { ActionLink } from '../ActionLink';
 import { createJourneyCardStyles } from './JourneyCard.styles';
 
 interface JourneyCardProps {
@@ -28,9 +29,7 @@ export function JourneyCard({ journey, onPress }: JourneyCardProps) {
       <Text style={styles.description} numberOfLines={2}>
         {journey.description}
       </Text>
-      <View style={styles.cta}>
-        <Text style={styles.ctaText}>{journey.ctaLabel}</Text>
-      </View>
+      <ActionLink label={journey.ctaLabel} color={theme.colors.textPrimary} size="compact" />
     </TouchableOpacity>
   );
 }

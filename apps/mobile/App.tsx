@@ -16,8 +16,11 @@ function AppContent() {
   const [mode, setMode] = useState<AppMode>('landing');
 
   return (
-    <SafeAreaView style={styles.root} edges={['top', 'bottom']}>
-      <StatusBar style={theme.statusBarStyle} />
+    <SafeAreaView
+      style={[styles.root, mode === 'landing' && styles.landingRoot]}
+      edges={['top', 'bottom']}
+    >
+      <StatusBar style={mode === 'landing' ? 'light' : theme.statusBarStyle} />
       <AppNavigator mode={mode} onModeChange={setMode} />
     </SafeAreaView>
   );

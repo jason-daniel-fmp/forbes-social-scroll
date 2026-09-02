@@ -16,11 +16,6 @@ export function createHomeBuyingWebViewStyles(theme: Theme) {
       flex: 1,
       backgroundColor: '#FFFFFF',
     },
-    safariLink: {
-      color: theme.colors.accent,
-      fontSize: theme.typography.swipeHint,
-      fontWeight: '700',
-    },
     loadingOverlay: {
       ...StyleSheet.absoluteFillObject,
       alignItems: 'center',

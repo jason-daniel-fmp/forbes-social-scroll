@@ -1,72 +1,35 @@
 import { StyleSheet } from 'react-native';
 
-import type { Theme } from '@forbes/theme';
+import { homeJourneyCanvas } from '../data/homeJourneyTheme';
 
-export function createHomeBuyingPhaseHubStyles(theme: Theme) {
-  const tileGap = theme.layout.screenPaddingHorizontal;
-
+export function createHomeBuyingPhaseHubStyles() {
   return StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: theme.colors.background,
+      backgroundColor: homeJourneyCanvas,
     },
-    content: {
-      flex: 1,
-      paddingHorizontal: tileGap,
-      paddingTop: theme.spacing.lg,
-      paddingBottom: tileGap,
+    intro: {
+      paddingHorizontal: 20,
+      paddingTop: 16,
+      paddingBottom: 12,
     },
     title: {
-      color: theme.colors.textPrimary,
-      fontSize: theme.typography.title + 4,
+      color: '#1E2125',
+      fontSize: 24,
       fontWeight: '700',
-      marginBottom: theme.spacing.sm,
+      lineHeight: 28,
+      marginBottom: 6,
     },
     subtitle: {
-      color: theme.colors.textSecondary,
-      fontSize: theme.typography.subtitle + 2,
-      lineHeight: 22,
-      marginBottom: tileGap,
+      color: '#3C5C55',
+      fontSize: 15,
+      lineHeight: 20,
     },
-    grid: {
-      gap: tileGap,
-    },
-    row: {
-      flexDirection: 'row',
-      gap: tileGap,
-    },
-    phaseButton: {
+    collage: {
       flex: 1,
-      aspectRatio: 1,
-      borderWidth: 1,
-      borderColor: theme.colors.accent,
-      borderRadius: 16,
-      backgroundColor: theme.colors.surface,
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: theme.spacing.md,
-    },
-    iconWrap: {
-      width: 56,
-      height: 56,
-      borderRadius: 28,
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: theme.colors.background,
-      marginBottom: theme.spacing.md,
-    },
-    phaseTitle: {
-      color: theme.colors.textPrimary,
-      fontSize: theme.typography.title,
-      fontWeight: '700',
-      marginBottom: theme.spacing.xs,
-      textAlign: 'center',
-    },
-    phaseSubtitle: {
-      color: theme.colors.textSecondary,
-      fontSize: theme.typography.body,
-      lineHeight: 18,
-      textAlign: 'center',
+      minHeight: 0,
+      paddingHorizontal: 12,
+      paddingBottom: 12,
     },
   });
 }

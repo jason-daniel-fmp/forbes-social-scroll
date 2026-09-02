@@ -25,18 +25,6 @@ export function createJourneyWebViewStyles(theme: Theme) {
       flex: 1,
       marginRight: theme.spacing.sm,
     },
-    closeButton: {
-      paddingHorizontal: theme.spacing.sm,
-      paddingVertical: theme.spacing.xs,
-      borderWidth: 1,
-      borderColor: theme.colors.accent,
-      borderRadius: 4,
-    },
-    closeText: {
-      color: theme.colors.accent,
-      fontSize: theme.typography.swipeHint,
-      fontWeight: '700',
-    },
     webviewContainer: {
       flex: 1,
       position: 'relative',
@@ -74,18 +62,6 @@ export function createJourneyWebViewStyles(theme: Theme) {
       fontSize: theme.typography.body,
       textAlign: 'center',
       marginBottom: theme.spacing.lg,
-    },
-    retryButton: {
-      paddingHorizontal: theme.spacing.lg,
-      paddingVertical: theme.spacing.sm,
-      borderWidth: 1,
-      borderColor: theme.colors.accent,
-      borderRadius: 4,
-    },
-    retryText: {
-      color: theme.colors.accent,
-      fontSize: theme.typography.subtitle,
-      fontWeight: '700',
     },
   });
 }

@@ -1,12 +1,22 @@
-import { Ionicons } from '@expo/vector-icons';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { useEffect, useMemo, useState } from 'react';
+import { Text, View } from 'react-native';
 
-import { useTheme } from '@forbes/theme';
 import { NavBar } from '@forbes/ui';
 
+import {
+  CollageExplorer,
+  incrementTileClick,
+  loadTileClicks,
+  scopedClickMap,
+  scopedTileId,
+  type TileClickMap,
+} from '../../../shared/tiles';
+import { paletteForHomePhase } from '../data/homeJourneyTheme';
 import type { HomeBuyingPhaseId } from '../data/homeBuyingPhases';
 import { homeBuyingPhaseOptions } from '../data/homeBuyingPhases';
 import { createHomeBuyingPhaseHubStyles } from './HomeBuyingPhaseHubScreen.styles';
+
+const CLICK_SCOPE = 'home-phase';
 
 interface HomeBuyingPhaseHubScreenProps {
   onBack: () => void;
@@ -14,46 +24,68 @@ interface HomeBuyingPhaseHubScreenProps {
 }
 
 export function HomeBuyingPhaseHubScreen({ onBack, onSelectPhase }: HomeBuyingPhaseHubScreenProps) {
-  const { theme } = useTheme();
-  const styles = createHomeBuyingPhaseHubStyles(theme);
+  const styles = createHomeBuyingPhaseHubStyles();
+  const [clicks, setClicks] = useState<TileClickMap>({});
+  const [isHydrated, setIsHydrated] = useState(false);
 
-  const renderPhaseButton = (phase: (typeof homeBuyingPhaseOptions)[number]) => (
-    <TouchableOpacity
-      key={phase.id}
-      style={styles.phaseButton}
-      onPress={() => onSelectPhase(phase.id)}
-      accessibilityRole="button"
-      accessibilityLabel={`${phase.title}. ${phase.subtitle}`}
-    >
-      <View style={styles.iconWrap}>
-        <Ionicons name={phase.icon} size={28} color={theme.colors.accent} />
-      </View>
-      <Text style={styles.phaseTitle}>{phase.title}</Text>
-      <Text style={styles.phaseSubtitle} numberOfLines={2}>
-        {phase.subtitle}
-      </Text>
-    </TouchableOpacity>
+  useEffect(() => {
+    let cancelled = false;
+
+    void loadTileClicks().then((loaded) => {
+      if (!cancelled) {
+        setClicks(loaded);
+        setIsHydrated(true);
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const tiles = useMemo(
+    () =>
+      homeBuyingPhaseOptions.map((phase) => ({
+        id: phase.id,
+        title: phase.title,
+        eyebrow: 'Buy',
+        palette: paletteForHomePhase(phase.id),
+      })),
+    [],
   );
 
-  const rows = [homeBuyingPhaseOptions.slice(0, 2), homeBuyingPhaseOptions.slice(2, 4)];
+  const rankedClicks = useMemo(
+    () =>
+      scopedClickMap(
+        clicks,
+        CLICK_SCOPE,
+        homeBuyingPhaseOptions.map((phase) => phase.id),
+      ),
+    [clicks],
+  );
 
   return (
     <View style={styles.container}>
       <NavBar onBack={onBack} backLabel="Goals" />
 
-      <View style={styles.content}>
+      <View style={styles.intro}>
         <Text style={styles.title}>Planning to buy a house</Text>
-        <Text style={styles.subtitle}>
-          Start wherever you are — pick a phase and we&apos;ll guide you from there.
-        </Text>
+        <Text style={styles.subtitle}>Start wherever you are — pick a phase.</Text>
+      </View>
 
-        <View style={styles.grid}>
-          {rows.map((row) => (
-            <View key={row.map((phase) => phase.id).join('-')} style={styles.row}>
-              {row.map(renderPhaseButton)}
-            </View>
-          ))}
-        </View>
+      <View style={styles.collage}>
+        {isHydrated ? (
+          <CollageExplorer
+            tiles={tiles}
+            clicks={rankedClicks}
+            onSelect={(id) => {
+              void incrementTileClick(scopedTileId(CLICK_SCOPE, id)).then((next) => {
+                setClicks(next);
+                onSelectPhase(id as HomeBuyingPhaseId);
+              });
+            }}
+          />
+        ) : null}
       </View>
     </View>
   );

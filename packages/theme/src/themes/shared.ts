@@ -1,4 +1,9 @@
-import type { ThemeLayout, ThemeSpacing, ThemeTypography } from '../theme.types';
+import type {
+  ThemeEditorialTypography,
+  ThemeLayout,
+  ThemeSpacing,
+  ThemeTypography,
+} from '../theme.types';
 
 /** Article-feed type scale — kept app-specific, not taken from phoenix headings. */
 export const sharedTypography: ThemeTypography = {
@@ -41,4 +46,13 @@ export const sharedSpacing: ThemeSpacing = {
   md: 12,
   lg: 16,
   xl: 24,
+};
+
+export const sharedEditorialTypography: ThemeEditorialTypography = {
+  headline: 48,
+  category: 28,
+  categorySelected: 36,
+  number: 13,
+  descriptor: 14,
+  meta: 12,
 };
